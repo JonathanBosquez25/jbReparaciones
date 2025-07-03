@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JB Forklift Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">JB Forklift Services</h1>
+      <nav class="nav">
+        <button onclick="setPage('home')">Inicio</button>
+        <button onclick="setPage('services')">Servicios</button>
+        <button onclick="setPage('quote')">Cotizador</button>
+        <button onclick="setPage('gallery')">Galería</button>
+        <button onclick="setPage('parts')">Repuestos</button>
+        <button onclick="setPage('contact')">Contacto</button>
+      </nav>
+      <a href="https://wa.me/593993253561" target="_blank" class="whatsapp">WhatsApp</a>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <select onchange="setPage(this.value)">
+      <option value="home">Inicio</option>
+      <option value="services">Servicios</option>
+      <option value="quote">Cotizador</option>
+      <option value="gallery">Galería</option>
+      <option value="parts">Repuestos</option>
+      <option value="contact">Contacto</option>
+    </select>
+  </div>
+
+  <!-- Secciones -->
+  <main>
+    <section id="home" class="section active">
+      <h2>Mantenimiento y Venta de Repuestos para Maquinaria Pesada</h2>
+      <p>Especialistas en mantenimiento preventivo y correctivo. Calidad y compromiso garantizados.</p>
+      <div class="buttons">
+        <button onclick="setPage('quote')">Cotiza aquí</button>
+        <button onclick="setPage('gallery')">Ver Galería</button>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Nuestros Servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Mantenimiento Preventivo</h3>
+          <ul>
+            <li>Revisiones periódicas</li>
+            <li>Cambios programados de aceites y filtros</li>
+            <li>Diagnóstico temprano de fallas</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Mantenimiento Correctivo</h3>
+          <ul>
+            <li>Reparación de sistemas hidráulicos</li>
+            <li>Solución de problemas mecánicos y eléctricos</li>
+            <li>Servicio en campo o taller</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Venta de Repuestos</h3>
+          <ul>
+            <li>Refacciones originales y alternativas</li>
+            <li>Precios competitivos</li>
+            <li>Envíos a nivel nacional</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="section">
+      <h2>Solicita tu Cotización</h2>
+      <form id="quoteForm">
+        <input name="name" placeholder="Nombre completo" required>
+        <input name="company" placeholder="Empresa (opcional)">
+        <input name="phone" type="tel" placeholder="Teléfono" required>
+        <input name="email" type="email" placeholder="Correo electrónico" required>
+        <select name="serviceType" required>
+          <option value="">Selecciona tipo de servicio</option>
+          <option value="mantenimiento">Mantenimiento</option>
+          <option value="repuesto">Repuesto</option>
+          <option value="consulta">Consulta técnica</option>
+        </select>
+        <textarea name="description" rows="4" placeholder="Describe tu requerimiento..." required></textarea>
+        <button type="submit">Enviar Cotización</button>
+      </form>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Nuestro Trabajo</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/gallery1/300/200" alt="Trabajo 1" />
+        <img src="https://picsum.photos/seed/gallery2/300/200" alt="Trabajo 2" />
+        <img src="https://picsum.photos/seed/gallery3/300/200" alt="Trabajo 3" />
+        <img src="https://picsum.photos/seed/gallery4/300/200" alt="Trabajo 4" />
+        <img src="https://picsum.photos/seed/gallery5/300/200" alt="Trabajo 5" />
+        <img src="https://picsum.photos/seed/gallery6/300/200" alt="Trabajo 6" />
+      </div>
+    </section>
+
+    <section id="parts" class="section">
+      <h2>Catálogo de Repuestos</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://picsum.photos/seed/parts1/300/200" alt="Repuesto 1" />
+          <h3>Repuesto 1</h3>
+          <p>Descripción breve del repuesto...</p>
+          <button onclick="setPage('quote')">Consultar disponibilidad</button>
+        </div>
+        <!-- Repite para 6 partes -->
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contáctanos</h2>
+      <div class="contact-info">
+        <p><strong>Dirección:</strong> Cooperativa El Limonal, Mz 2392 Solar 3</p>
+        <p><strong>Teléfono:</strong> +593 99 325 3561</p>
+        <p><strong>Correo:</strong> jonathan.bosquez@jbforkliftservices.com</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/593993253561" target="_blank">Enviar mensaje</a></p>
+      </div>
+      <form id="contactForm">
+        <input name="name" placeholder="Tu nombre" required>
+        <input name="email" type="email" placeholder="Tu correo" required>
+        <textarea name="description" rows="4" placeholder="Escríbenos tu mensaje..." required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 JB Forklift Services. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
